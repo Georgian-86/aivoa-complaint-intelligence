@@ -1,0 +1,48 @@
+# Full stack: Postgres + FastAPI + the built React bundle behind nginx.
+#   docker compose up --build   →   http://localhost:8080
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: aivoa
+      POSTGRES_PASSWORD: aivoa
+      POSTGRES_DB: aivoa
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aivoa -d aivoa"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://aivoa:aivoa@db:5432/aivoa
+      # Supplied from your shell or a root .env file; blank runs the
+      # deterministic engine, which still demonstrates the full workflow.
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      # See docs/DEPLOYMENT.md, Step 0 -- gemma2-9b-it and
+      # llama-3.3-70b-versatile (the assignment-mandated models) are no
+      # longer reachable on a standard Groq key; these default to the
+      # current equivalents and stay overridable from your shell.
+      EXTRACTION_MODEL: ${EXTRACTION_MODEL:-openai/gpt-oss-20b}
+      REASONING_MODEL: ${REASONING_MODEL:-openai/gpt-oss-120b}
+      ENVIRONMENT: qualification
+      DEBUG: "false"
+      CORS_ORIGINS: http://localhost:8080
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  web:
+    build: ./frontend
+    depends_on:
+      - api
+    ports:
+      - "8080:80"
+
+volumes:
+  pgdata:

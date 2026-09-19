@@ -1,0 +1,75 @@
+.register { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+.filters {
+  display: flex; align-items: center; gap: var(--sp-3); flex-wrap: wrap;
+  padding: var(--sp-3) var(--sp-4);
+}
+.search-box { position: relative; min-width: 260px; flex: 1; max-width: 420px; }
+.search-box svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--ink-4); }
+.search-box .input { padding-left: 31px; }
+
+.facet {
+  display: inline-flex; align-items: center; gap: 5px; height: 27px; padding: 0 9px;
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface); font-size: var(--text-xs); font-weight: 550; color: var(--ink-2);
+  transition: all .12s var(--ease);
+}
+.facet:hover { border-color: var(--line-strong); }
+.facet.is-on { background: var(--ink); border-color: var(--ink); color: var(--ink-invert); }
+
+/* ── Table ────────────────────────────────────────────────────────────────── */
+.table-wrap { overflow-x: auto; }
+table.reg { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+table.reg th {
+  text-align: left; padding: 9px var(--sp-4);
+  font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--ink-3); border-bottom: 1px solid var(--line);
+  white-space: nowrap; background: var(--surface-sunken);
+  position: sticky; top: 0; z-index: 1;
+}
+table.reg th.sortable { cursor: pointer; }
+table.reg th.sortable:hover { color: var(--ink); }
+table.reg td { padding: 10px var(--sp-4); border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+table.reg tbody tr { cursor: pointer; transition: background .1s var(--ease); }
+table.reg tbody tr:hover { background: var(--surface-sunken); }
+table.reg tbody tr:last-child td { border-bottom: 0; }
+.cell-ref { font-family: var(--font-mono); font-weight: 600; font-variant-numeric: tabular-nums; }
+.cell-sub { color: var(--ink-3); font-size: var(--text-xs); margin-top: 2px; }
+.overdue { color: var(--critical); font-weight: 600; }
+
+.pager {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3);
+  padding: 10px var(--sp-4); border-top: 1px solid var(--line-soft);
+}
+
+/* ── Detail ───────────────────────────────────────────────────────────────── */
+.detail { display: flex; flex-direction: column; gap: var(--sp-4); }
+.detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: var(--sp-4); align-items: start; }
+@media (max-width: 1200px) { .detail-grid { grid-template-columns: minmax(0, 1fr); } }
+
+.kv { display: grid; grid-template-columns: 150px 1fr; gap: 10px; padding: 7px 0; }
+.kv + .kv { border-top: 1px solid var(--line-soft); }
+.kv dt { font-size: var(--text-xs); color: var(--ink-3); font-weight: 600; }
+.kv dd { margin: 0; font-size: var(--text-sm); }
+
+.audit { position: relative; padding-left: 18px; }
+.audit::before { content: ''; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
+.audit-item { position: relative; padding: 9px 0; }
+.audit-item::before {
+  content: ''; position: absolute; left: -18px; top: 14px;
+  width: 7px; height: 7px; border-radius: 99px;
+  background: var(--surface); border: 1.5px solid var(--line-strong);
+}
+.audit-item.is-agent::before { border-color: var(--accent); background: var(--accent); }
+.audit-when { font-family: var(--font-mono); font-size: 10px; color: var(--ink-4); }
+
+/* ── Dashboard ────────────────────────────────────────────────────────────── */
+.dash { display: flex; flex-direction: column; gap: var(--sp-4); }
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--sp-3); }
+.chart-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: var(--sp-4); }
+
+.bar-row { display: grid; grid-template-columns: 1fr 44px; gap: 10px; align-items: center; padding: 6px 0; }
+.bar-row + .bar-row { border-top: 1px solid var(--line-soft); }
+.bar-track { height: 18px; background: var(--surface-sunken); border-radius: 2px; overflow: hidden; display: flex; }
+.bar-fill { height: 100%; transition: width .5s var(--ease); }
+.bar-num { font-family: var(--font-mono); font-size: var(--text-sm); text-align: right; font-variant-numeric: tabular-nums; }

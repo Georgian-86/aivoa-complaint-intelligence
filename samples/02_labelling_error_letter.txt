@@ -1,0 +1,38 @@
+MARKET COMPLAINT NOTIFICATION
+St. Alban's Teaching Hospital - Pharmacy Department
+Ref: SATH/PHARM/CMP/2026/117
+Date of complaint: 08 September 2026
+
+To: Quality Assurance, Marketing Authorisation Holder
+
+Complaint raised by : Dr. Helen Marsh, Chief Pharmacist
+Contact             : pharmacy@stalbans.example
+Country             : United Kingdom
+
+PRODUCT CONCERNED
+Product     : Levothyroxine Sodium Tablets
+Strength    : 50 mcg
+Dosage form : Tablet
+Batch No    : LEV2604A
+Mfg date    : 11 Feb 2025
+Expiry      : Jan 2027
+Quantity    : 14 strips from a single shipper carton
+
+DESCRIPTION OF DEFECT
+During a routine dispensary stock check our technician identified that the
+outer carton declares a strength of 50 mcg while the blister foil overprint on
+fourteen strips reads 25 mcg. The tablet debossing could not be used to confirm
+the true strength visually.
+
+No units from the affected strips have been dispensed to patients. The stock has
+been isolated in a quarantine bin within the dispensary and is available for
+collection.
+
+We consider this a potentially serious labelling discrepancy given that
+levothyroxine is a narrow therapeutic index product and request an urgent
+assessment of whether other batches are affected.
+
+Sample available for collection: Yes
+
+Dr. Helen Marsh
+Chief Pharmacist

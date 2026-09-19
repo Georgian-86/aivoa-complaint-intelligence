@@ -1,0 +1,31 @@
+# ── Web framework ────────────────────────────────────────────────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# ── Persistence ──────────────────────────────────────────────────────────────
+SQLAlchemy==2.0.36
+psycopg[binary]==3.2.3          # PostgreSQL driver (psycopg 3)
+PyMySQL==1.1.1                  # optional MySQL driver
+
+# ── AI / Agent ───────────────────────────────────────────────────────────────
+langgraph>=0.2.60,<0.3
+langchain-core>=0.3.28,<0.4
+langchain-groq>=0.2.3,<0.3
+groq>=0.15
+
+# ── Document parsing ─────────────────────────────────────────────────────────
+pypdf==5.1.0
+python-docx==1.1.2              # .docx complaint forms
+# .eml / .msg are handled by the standard library `email` package.
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+rapidfuzz==3.11.0               # duplicate-detection scoring
+
+# ── Dev / test ───────────────────────────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.25.0
+httpx==0.28.1                   # required by starlette's TestClient

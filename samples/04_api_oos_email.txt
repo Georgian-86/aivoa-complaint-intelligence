@@ -1,0 +1,28 @@
+From: qa.helix@helixcdmo.example
+Subject: Out of Specification assay result - Atorvastatin Calcium API, Lot ATC3140
+Date: 10 September 2026
+
+Dear Supplier Quality,
+
+Helix CDMO Singapore is formally notifying you of an out-of-specification
+result obtained during incoming quality control on the following consignment.
+
+Material          : Atorvastatin Calcium (Active Pharmaceutical Ingredient, bulk)
+Lot No            : ATC3140
+Manufacturing date: 21 March 2026
+Retest date       : March 2028
+Quantity received : 75 kg (3 drums)
+Quantity affected : 25 kg (drum 2 of 3)
+
+Assay by HPLC returned 97.2% against your certificate of analysis value of
+99.4% and a specification of 98.0-102.0%. The result was confirmed on a second
+independent sampling point from the same drum by a different analyst, and the
+system suitability and reference standard were verified as compliant.
+
+We have placed the full consignment on hold. Please confirm within 3 working
+days whether you will accept a return or require retained sample testing at
+your site. Your CoA and our result are attached for comparison.
+
+Regards,
+Marcus Teo
+Supplier Quality Assurance, Helix CDMO

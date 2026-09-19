@@ -1,0 +1,154 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   AIVOA — design tokens
+
+   The visual language is "controlled document meets laboratory instrument":
+   warm bone paper rather than clinical white, hairline rules instead of soft
+   shadows, a restrained deep-pine accent, and a three-step signal scale that
+   maps 1:1 onto GMP severity. Radii are small and geometry is on an 8px grid,
+   because a quality record should read as a document, not as a consumer app.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Surfaces ───────────────────────────────────────────────────────────── */
+  --paper:            #F3F2ED;   /* page                                      */
+  --surface:          #FFFFFF;   /* cards, panels                             */
+  --surface-sunken:   #EBE9E2;   /* wells, inert fields                       */
+  --surface-raised:   #FFFFFF;
+  --shell:            #14171A;   /* navigation rail                           */
+  --shell-2:          #1D2125;
+  --shell-line:       #2C3238;
+
+  /* ── Rules ──────────────────────────────────────────────────────────────── */
+  --line:             #DEDBD1;
+  --line-soft:        #E8E5DD;
+  --line-strong:      #C3BDAE;
+
+  /* ── Ink ────────────────────────────────────────────────────────────────── */
+  --ink:              #16181B;
+  --ink-2:            #474C52;
+  --ink-3:            #797F87;
+  --ink-4:            #A2A7AD;
+  --ink-invert:       #F4F3EF;
+
+  /* ── Accent: deep pine ──────────────────────────────────────────────────── */
+  --accent:           #0F4C43;
+  --accent-hover:     #0B3A33;
+  --accent-active:    #072B26;
+  --accent-ink:       #FFFFFF;
+  --accent-tint:      #E4EEEB;
+  --accent-tint-2:    #CFE1DC;
+  --accent-line:      #9CBFB7;
+
+  /* ── Signal scale (GMP severity) ────────────────────────────────────────── */
+  --critical:         #9E2B20;
+  --critical-tint:    #F8E9E6;
+  --critical-line:    #E0BCB5;
+
+  --major:            #A0620F;
+  --major-tint:       #FAF0DF;
+  --major-line:       #E2C79A;
+
+  --minor:            #3F646D;
+  --minor-tint:       #E8F0F1;
+  --minor-line:       #B9CDD1;
+
+  --positive:         #2E6B47;
+  --positive-tint:    #E4EFE7;
+
+  /* Bands used by the risk meter. Deliberately a single-hue ramp so the meter
+     reads as a measurement, not a traffic light. */
+  --band-low:         #4F7A6B;
+  --band-moderate:    #8A7A3C;
+  --band-high:        #A0620F;
+  --band-severe:      #9E2B20;
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Inter', ui-monospace, 'SF Mono', 'Cascadia Mono', 'Roboto Mono', monospace;
+
+  --text-display:  1.5rem;     /* 24px */
+  --text-title:    1.0625rem;  /* 17px */
+  --text-body:     0.84375rem; /* 13.5px */
+  --text-sm:       0.78125rem; /* 12.5px */
+  --text-xs:       0.6875rem;  /* 11px  */
+
+  /* ── Geometry ───────────────────────────────────────────────────────────── */
+  --r-xs: 3px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px;
+
+  /* ── Elevation — overlays only ──────────────────────────────────────────── */
+  --shadow-pop:   0 10px 28px -8px rgba(20, 23, 26, .22), 0 2px 6px rgba(20, 23, 26, .07);
+  --shadow-panel: 0 1px 2px rgba(20, 23, 26, .045);
+
+  --focus: 0 0 0 2px var(--paper), 0 0 0 4px rgba(15, 76, 67, .45);
+
+  --rail-w: 232px;
+  --rail-w-collapsed: 60px;
+  --topbar-h: 52px;
+
+  --ease: cubic-bezier(.32, .72, 0, 1);
+}
+
+/* ── Dark theme ───────────────────────────────────────────────────────────── */
+:root[data-theme='dark'] {
+  --paper:            #0E1013;
+  --surface:          #16191D;
+  --surface-sunken:   #101317;
+  --surface-raised:   #1C2025;
+  --shell:            #0A0C0E;
+  --shell-2:          #14171A;
+  --shell-line:       #23282D;
+
+  --line:             #262B31;
+  --line-soft:        #1E2329;
+  --line-strong:      #394047;
+
+  --ink:              #E9E7E2;
+  --ink-2:            #B4B8BD;
+  --ink-3:            #858B92;
+  --ink-4:            #5F656C;
+  --ink-invert:       #16191D;
+
+  --accent:           #3C9285;
+  --accent-hover:     #4BA598;
+  --accent-active:    #58B3A5;
+  --accent-ink:       #07211D;
+  --accent-tint:      #142A27;
+  --accent-tint-2:    #1B3A35;
+  --accent-line:      #2C5C54;
+
+  --critical:         #DE7266;
+  --critical-tint:    #2A1613;
+  --critical-line:    #55271F;
+
+  --major:            #D69A4A;
+  --major-tint:       #271C0E;
+  --major-line:       #4D3819;
+
+  --minor:            #8FB2BA;
+  --minor-tint:       #121D20;
+  --minor-line:       #26393E;
+
+  --positive:         #6BAF85;
+  --positive-tint:    #13241A;
+
+  --band-low:         #6BAF85;
+  --band-moderate:    #C2AC5E;
+  --band-high:        #D69A4A;
+  --band-severe:      #DE7266;
+
+  --shadow-pop:   0 12px 32px -8px rgba(0, 0, 0, .7), 0 2px 8px rgba(0, 0, 0, .4);
+  --shadow-panel: 0 1px 2px rgba(0, 0, 0, .3);
+  --focus: 0 0 0 2px var(--paper), 0 0 0 4px rgba(60, 146, 133, .55);
+}
+
+/* The theme is always written to <html data-theme> by an inline script in
+   index.html before first paint, so there is no flash and no ambiguity about
+   which palette is live. */
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark']  { color-scheme: dark;  }

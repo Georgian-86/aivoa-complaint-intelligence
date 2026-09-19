@@ -1,0 +1,45 @@
+From: Priya Raghavan <qa@meridianpharma.example>
+To: complaints@aivoa-pharma.example
+Cc: warehouse.qa@meridianpharma.example
+Subject: URGENT - Particulate matter observed in Ceftrioxam 1g Injection, Batch CFX24B902
+Date: 14 September 2026
+
+Dear Quality Assurance Team,
+
+We are writing to raise a formal market complaint on behalf of Meridian Pharma
+Distribution, Hyderabad.
+
+On 12 September 2026, our warehouse QA team performed a routine visual
+inspection of a returned consignment of Ceftrioxam 1 g Injection (Lyophilised
+Powder for Injection). During reconstitution checks on retained units, black
+fibrous particulate matter was clearly visible in the reconstituted solution of
+multiple vials.
+
+Product details as printed on the carton:
+
+  Product Name    : Ceftrioxam 1 g Injection
+  Strength        : 1 g
+  Batch No.       : CFX24B902
+  Mfg. Date       : 03/2025
+  Exp. Date       : 02/2027
+  Pack            : 10 vials per carton
+
+Quantity affected: 38 vials across 4 cartons from the same shipper.
+
+Two hospitals in our distribution network have already reported that a patient
+receiving this product developed a febrile reaction and required overnight
+hospitalisation for observation. The treating physician has raised this with us
+directly. We have immediately quarantined all remaining stock of this batch at
+our depot (a further 620 vials).
+
+The affected vials have been segregated and are available for collection by
+your courier for investigation. Please confirm the collection arrangement and
+advise whether the remaining batch quantity should be returned.
+
+We request your urgent response given the patient safety implications.
+
+Regards,
+Priya Raghavan
+Head - Quality Assurance
+Meridian Pharma Distribution Pvt. Ltd., Hyderabad
++91 40 4455 8821 | qa@meridianpharma.example
