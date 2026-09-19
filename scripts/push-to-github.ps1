@@ -47,7 +47,15 @@ function Invoke-Native {
     $previous = $ErrorActionPreference
     $ErrorActionPreference = 'Continue'
     try {
-        & $Command
+        # Route the wrapped command's own output through Out-Host rather than
+        # letting it fall through this function's own output stream. Without
+        # this, PowerShell bundles that output together with the explicit
+        # `return $LASTEXITCODE` below into a single array, so a caller
+        # doing `if ($exit -ne 0)` is comparing an array (always -ne 0 in a
+        # way that reads as truthy garbage) instead of a clean integer - the
+        # exact bug that turned a successful `git push` into a false-positive
+        # "git push failed (exit code ...)" error.
+        & $Command | Out-Host
     } finally {
         $ErrorActionPreference = $previous
     }
